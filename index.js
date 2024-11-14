@@ -42,73 +42,39 @@
 //   ****************************************************************************
 
 const csv = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
-const colums = 4
-const rows = 4
-let cell0,cell1,cell2,cell3
 
-//const rows = csv.split('\n')
-//  console.log(rows);
-
-
-let line =rows[0].split('\,')
-
-
-for (let i = 0; i < 4; i++) {
-  cell0 = (line[i].split('\,'))
-
-}
-
- console.log(cell0)
-
+// // get the rows of the string
+// const rows = csv.split("\n");
+// //define cellls variable
+// let cell0,cell1,cell2,cell3
+// //loop through each row
 // for (let i = 0; i < 4; i++) {
-//       let cell = line[i].split('\,')
-//       console.log(cell)
-//     }
-// console.log(rows[1].split('\,'))
-// console.log(rows[2].split('\,'))
-// console.log(rows[3].split('\,'))
-// console.log(rows[4].split('\,'))
 
-// for (let i = 0; i < 4; i++) {
-//    console.log(rows[i].split('\,'))
+//    const cols = rows[i].split('\,')
+//    cell0 = cols[0]
+//    cell1 = cols[1]
+//    cell2 = cols[2]
+//    cell3 = cols[3]
+ 
+//    console.log(cell0,cell1,cell2,cell3)
 //  }
-
-// for (let i = 0; i < 4; i++) {
-//    console.log(csv.split('\n'));
-//  }
-
 //   ****************************************************************************
 // Part 2: Expanding Functionality
-// let col = 4;
+//   ****************************************************************************
+const csv1 = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
 
+let tab_arr = csv1.split("\n");
+console.log(tab_arr)
+let numCols = tab_arr[0].split(',');
+console.log(numCols.length);
 
+let arr1 = []
 
-// function computeArea (width , height){
-//    return "The rectangler area is : "+ width * height + " SQF";
+for (let i = 0; i < numCols.length; i++) {
 
-// }
+     let arr_row = tab_arr[i].split('\,')
 
-// computeArea(2,4)
+   arr1.push(arr_row);
+}
+console.log(arr1);
 
-// ***************************
-// function planetHasWater(planet){
-
-//    let plantlower = planet.toLowerCase();
-//    if(plantlower == "earth" || plantlower == "mars"){
-//       return true + " !!The planet has water";
-//    }
-//    else{
-//       return false + " :( The planet has water";;
-//    }
-
-// }
-// const planetHasWater = function(planet){
-//    let plantlower = planet.toLowerCase();
-//    if(plantlower == "earth" || plantlower == "mars"){
-//       return true + " !!The planet has water";
-//    }
-//    else{
-//       return false + " :( The planet has water";;
-//    }
-// }
-// planetHasWater('eArth');
