@@ -60,21 +60,39 @@ const csv = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,
 //  }
 //   ****************************************************************************
 // Part 2: Expanding Functionality
+// //   ****************************************************************************
+// const csv1 = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
+
+// let tab_arr = csv1.split("\n");
+// console.log(tab_arr)
+// let numCols = tab_arr[0].split(',');
+// console.log(numCols.length);
+
+// let arr1 = []
+
+// for (let i = 0; i < numCols.length; i++) {
+
+//      let arr_row = tab_arr[i].split('\,')
+
+//    arr1.push(arr_row);
+// }
+
+// console.log(arr1);
+
 //   ****************************************************************************
-const csv1 = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
+// Part 3: Transforming Data
+//   ****************************************************************************
+const csv3 = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
+// console.log(csv3)
 
-let tab_arr = csv1.split("\n");
-console.log(tab_arr)
-let numCols = tab_arr[0].split(',');
-console.log(numCols.length);
+let firstRow = csv3.split("\n");
+console.log(firstRow)
 
-let arr1 = []
+// get the first heading of the table
+let heading = firstRow[0][0]
+console.log(heading)
 
-for (let i = 0; i < numCols.length; i++) {
 
-     let arr_row = tab_arr[i].split('\,')
-
-   arr1.push(arr_row);
-}
-console.log(arr1);
-
+//lowercase the heading
+const myObject = object.fromenteries(heading)
+console.log(myobject)
